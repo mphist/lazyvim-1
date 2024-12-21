@@ -19,3 +19,15 @@ vim.keymap.set("n", "]e", diagnostic_goto(true, "ERROR"), { desc = "Next Error" 
 vim.keymap.set("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
 vim.keymap.set("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
 vim.keymap.set("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
+
+vim.keymap.set("n", "te", ":tabedit<Cr>")
+vim.keymap.set("n", "ss", ":split<Cr>")
+vim.keymap.set("n", "sv", ":vsplit<Cr>")
+
+vim.keymap.set("n", "<tab>", "<cmd>BufferLineCycleNext<cr>", {})
+vim.keymap.set("n", "<s-tab>", "<cmd>BufferLineCyclePrev<cr>", {})
+
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==")
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==")
+vim.keymap.set("v", "<A-j>", ":m '>+1<cr>gv=gv")
+vim.keymap.set("v", "<A-k>", ":m '<-2<cr>gv=gv")
